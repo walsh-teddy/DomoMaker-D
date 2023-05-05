@@ -47,7 +47,7 @@ nav:nth-child(1) {
     background-color: #66bdff;
 }
 
-.domoForm {
+.domoForm, .chatForm {
     border: 2px solid #338acc;
     height: 35px;
     width: 700px;
@@ -58,18 +58,18 @@ nav:nth-child(1) {
     border-top-right-radius: 4px;
 }
 
-.domoForm label {
+.domoForm label, .chatForm label {
     display: inline-block;
     width: 75px;
     margin-left: 10px;
     font-size: 1.2em;
-    float: left;
+    /*float: left;*/
     color: white;
 }
 
-.domoForm input[type=text] {
+/* .domoForm input[type=text] {
     float:left;
-}
+} */
 
 .makeDomoSubmit {
     transition: background-color 0.4s ease;
@@ -192,7 +192,7 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-#domos {
+#domos, #chat {
     width: 40%;
     min-width: 400px;
     border: 2px solid #55acee;
@@ -201,7 +201,7 @@ nav:nth-child(1) {
     margin-top: 100px;
 }
 
-.domo {
+.domo, .chatMessage {
     width: 95%;
     margin: 0 auto;
     margin-top: 2px;
@@ -214,7 +214,7 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-.domo:hover {
+.domo:hover, .chatMessage:hover {
     transition: border-color 0.2s ease-out;
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
@@ -231,7 +231,7 @@ img.domoFace {
     float:left;
 }
 
-h3.emptyDomo {
+h3.emptyDomo, h3.emptyChatMessages {
     width: 400px;
     font-size: 1.5em;
     margin: 0 auto;
@@ -247,7 +247,13 @@ h3.domoName {
     font-size: 1.5em;
 }
 
-h3.domoAge {
+h3.chatMessageOwner {
+    font-weight: bold;
+    padding-left: 65px;
+    font-size: 1.5em;
+}
+
+h3.domoAge, h3.domoCoolness {
     float:right;
     text-align: left;
     width: 100px;
@@ -256,10 +262,10 @@ h3.domoAge {
     font-size: 1.5em;
 }
 
-.domo:first-child {
+.domo:first-child, .chatMessage:first-child {
     margin-top: 10px;
 }
 
-.domo:last-child {
+.domo:last-child, .chatMessage:last-child {
     margin-bottom:10px;
 }
